@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Is_On_Pos : MonoBehaviour
 {
-    [SerializeField] double speed_eblan1;
-    [SerializeField] double eblan1_coord;
+    [SerializeField] double speed_vrag2;
+    [SerializeField] double vrag2_coord;
     // Start is called before the first frame update
     void Start()
     {
