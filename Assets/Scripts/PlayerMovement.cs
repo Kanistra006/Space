@@ -6,8 +6,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] int _speed = 25;
-    public float boundaryLeft = -8.0f;
-    public float boundaryRight = 8.0f;
+    public float boundaryLeft = -8.2f;
+    public float boundaryRight = 8.2f;
     void Start()
     {
         
