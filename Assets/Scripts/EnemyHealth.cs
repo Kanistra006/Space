@@ -32,6 +32,7 @@ public class EnemyHealth : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject); // ”ничтожаем объект врага
+        GameManager.score++;
         // «десь можно добавить логику дл€ анимации смерти, очков и т.д.
     }
 }
