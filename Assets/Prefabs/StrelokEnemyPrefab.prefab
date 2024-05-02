@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 1397568350831247985}
   - component: {fileID: 5472462247643536400}
   - component: {fileID: -867320795799927010}
-  - component: {fileID: 255393792781437218}
+  - component: {fileID: 8906416827801648954}
   m_Layer: 0
   m_Name: StrelokEnemyPrefab
   m_TagString: Enemy
@@ -197,7 +197,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &255393792781437218
+--- !u!114 &8906416827801648954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,6 +206,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4418230627128925562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 124c741526d8e14458c959494a36ece2, type: 3}
+  m_Script: {fileID: 11500000, guid: 86632a5fa15e0f74e9e46989b37ddf97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 2
