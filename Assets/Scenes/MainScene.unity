@@ -554,7 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2858403ee34db41a9b8eaf4aa3b36d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 25
+  _speed: 20
   boundaryLeft: -19.5
   boundaryRight: 13.5
 --- !u!4 &1130720706
@@ -884,7 +884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1402942349
 MonoBehaviour:
   m_ObjectHideFlags: 0
