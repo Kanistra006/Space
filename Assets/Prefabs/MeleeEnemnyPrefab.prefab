@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2637869002066522410}
   - component: {fileID: 4347869017844169942}
   - component: {fileID: 7052420844464268111}
+  - component: {fileID: 5586461775904871619}
   m_Layer: 0
   m_Name: MeleeEnemnyPrefab
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,6 +111,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5586461775904871619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958858107298150578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 124c741526d8e14458c959494a36ece2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2771584480950562810
 GameObject:
   m_ObjectHideFlags: 0

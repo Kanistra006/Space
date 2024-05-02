@@ -6,13 +6,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] int _speed = 25;
-    public float boundaryLeft = -8.2f;
-    public float boundaryRight = 8.2f;
-    void Start()
-    {
-        
-    }
-
+    public float boundaryLeft = -13.5f;
+    public float boundaryRight = 19.5f;
+   
     // Update is called once per frame
     void Update()
     {

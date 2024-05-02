@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1424261221594606354}
   - component: {fileID: -6929106538341035357}
   - component: {fileID: 7277992150852839578}
+  - component: {fileID: 6181721898387162316}
   m_Layer: 0
   m_Name: RocketeerEnemyPrefab
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,6 +113,18 @@ CapsuleCollider2D:
   m_Offset: {x: 1.6367085, y: -3.8148904}
   m_Size: {x: 9.778817, y: 11.477056}
   m_Direction: 0
+--- !u!114 &6181721898387162316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2964001335220142056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 124c741526d8e14458c959494a36ece2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5524359630620655126
 GameObject:
   m_ObjectHideFlags: 0
