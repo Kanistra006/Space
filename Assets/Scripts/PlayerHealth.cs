@@ -1,11 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class EnemyHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 3; // Максимальное здоровье врага
+
+    public int maxHealth = 5; // Максимальное здоровье врага
     private int currentHealth; // Текущее здоровье врага
 
-   
+
     void Start()
     {
         currentHealth = maxHealth; // Начальное здоровье при создании врага
@@ -14,14 +18,10 @@ public class EnemyHealth : MonoBehaviour
     {
 
         // Проверяем, соответствует ли объект, с которым произошло столкновение, определенному условию
-        if (other.gameObject.tag == "PlayerBullet") // Убедитесь, что у объекта игрока есть тег "Player"
+        if (other.gameObject.tag == "Enemy") // Убедитесь, что у объекта игрока есть тег "Player"
         {
             TakeDamage(1);
 
-        }
-        if (other.gameObject.tag == "Player")
-        {
-            TakeDamage(1);
         }
     }
     public void TakeDamage(int damage)
@@ -36,7 +36,7 @@ public class EnemyHealth : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject); // Уничтожаем объект врага
-        GameManager.score++;
+        SceneManager.LoadScene("StartScene");
         // Здесь можно добавить логику для анимации смерти, очков и т.д.
     }
 }
