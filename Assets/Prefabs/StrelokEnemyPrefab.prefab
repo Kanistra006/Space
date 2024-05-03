@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 5472462247643536400}
   - component: {fileID: -867320795799927010}
   - component: {fileID: 8906416827801648954}
+  - component: {fileID: 299038564367819259}
   m_Layer: 0
   m_Name: StrelokEnemyPrefab
   m_TagString: Enemy
@@ -117,6 +118,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5910536664549201093}
   - {fileID: 4761494022144067628}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -210,3 +212,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
+--- !u!114 &299038564367819259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4418230627128925562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f76a0e4bd12a514195d108221f62e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 3225722176001757199, guid: 19897cf19412d38449385f40fcade693, type: 3}
+  firePoint: {fileID: 5910536664549201093}
+  fireRate: 1
+  bulletsPerQueue: 3
+  queueCooldown: 4
+  bulletSpeed: 10
+--- !u!1 &5051916025469659408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5910536664549201093}
+  m_Layer: 0
+  m_Name: Shooting_Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5910536664549201093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5051916025469659408}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.617, y: 0.542, z: 0.12277071}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7710436986552420671}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
