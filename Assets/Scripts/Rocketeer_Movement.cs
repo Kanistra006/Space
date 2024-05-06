@@ -2,22 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Rocketeer_Movement : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
     // Update is called once per frame
    
     [SerializeField] float verticalSpeed = 3.0f;
     [SerializeField] public float stopYPosition = 0.0f;
-    [SerializeField] public Transform playerTransform; // Трансформ игрока, за которым следует враг
+    [SerializeField] public Transform Player; // Трансформ игрока, за которым следует враг
 
     private bool reachedPosition = false;
 
+    void Start()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
     void Update()
     {
         // Вертикальное движение к заданной точке
@@ -34,8 +35,8 @@ public class NewBehaviourScript : MonoBehaviour
         }
         else // Поворот к игроку
         {
-            Vector3 direction = playerTransform.position - transform.position;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f; // Поворот на 90 градусов для корректной ориентации
+            Vector3 direction = Player.position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f; // Поворот на 90 градусов для корректной ориентации
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
     }
