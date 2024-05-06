@@ -53,4 +53,6 @@ public class Shooting_for_Strelok : MonoBehaviour
         // Задаем скорость пули вниз по оси Y
         rb.velocity = -firePoint.up * bulletSpeed;
     }
+
+
 }

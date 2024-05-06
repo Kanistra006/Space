@@ -228,7 +228,7 @@ MonoBehaviour:
   firePoint: {fileID: 5910536664549201093}
   fireRate: 1
   bulletsPerQueue: 3
-  queueCooldown: 4
+  queueCooldown: 6
   bulletSpeed: 10
 --- !u!1 &5051916025469659408
 GameObject:
