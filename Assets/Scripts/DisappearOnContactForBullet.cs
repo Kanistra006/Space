@@ -14,7 +14,7 @@ public class DisappearOnContactForBullet : MonoBehaviour
         // Проверяем, соответствует ли объект, с которым произошло столкновение, определенному условию
         if (other.gameObject.tag == "Enemy") // Убедитесь, что у объекта игрока есть тег "Player"
         {
-            Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject); // Уничтожает этот объект
         }
     }
