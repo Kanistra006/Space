@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
 
     public int maxHealth = 5; // Максимальное здоровье врага
-    private int currentHealth; // Текущее здоровье врага
+    public static int currentHealth; // Текущее здоровье врага
 
 
     void Start()

@@ -46,7 +46,7 @@ TagManager:
   - name: BG
     uniqueID: 1596827503
     locked: 0
-  - name: FG
+  - name: UI
     uniqueID: 258161013
     locked: 0
   - name: Enemies and Player
