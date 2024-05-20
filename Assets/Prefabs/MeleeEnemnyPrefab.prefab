@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  explosionPrefab: {fileID: 0}
+  healBagPrefab: {fileID: 7250152355959325725, guid: baafe0a0450d68540b95883532b2d398, type: 3}
 --- !u!1 &2771584480950562810
 GameObject:
   m_ObjectHideFlags: 0

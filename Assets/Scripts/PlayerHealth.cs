@@ -6,21 +6,19 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
 
-    public int maxHealth = 5; // Максимальное здоровье игрока
-    public int currentHealth; // Текущее здоровье игрока
+    public int maxHealth = 5; // Максимальное здоровье врага
+    public static int currentHealth; // Текущее здоровье врага
 
 
     void Start()
     {
-        currentHealth = maxHealth; // Начальное здоровье при создании игрока
+        currentHealth = maxHealth; // Начальное здоровье при создании врага
     }
-   
-        
     void OnTriggerEnter2D(Collider2D other)
     {
 
         // Проверяем, соответствует ли объект, с которым произошло столкновение, определенному условию
-        if (other.gameObject.tag == "Enemy") // Убедитесь, что у объекта игрока есть тег "Enemy"
+        if (other.gameObject.tag == "Enemy") // Убедитесь, что у объекта игрока есть тег "Player"
         {
             TakeDamage(1);
 
@@ -33,10 +31,6 @@ public class PlayerHealth : MonoBehaviour
         {
             Die(); // Функция смерти, если здоровье опустится до 0 или ниже
         }
-    }
-    public void Heal(int healPower)
-    {
-        currentHealth = Mathf.Min(maxHealth, currentHealth + healPower);
     }
 
     private void Die()
