@@ -20,6 +20,7 @@ public class HomingMissle: MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
         Vector2 direction = (Vector2)target.position - rb.position;
         float rotateAmount = Vector3.Cross(direction, -transform.up).z;
         rb.velocity = -transform.up * speed;
@@ -40,8 +41,5 @@ public class HomingMissle: MonoBehaviour
         }
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Destroy (gameObject);
-    }
+
 }
