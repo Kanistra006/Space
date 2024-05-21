@@ -9,16 +9,16 @@ public class Laser_Disappear : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         timeOfLife -= Time.deltaTime;
-        if (timeOfLife <= 0 )
+        if (timeOfLife <= 0)
         {
-            Destroy( gameObject );
+            Destroy(gameObject);
         }
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -27,6 +27,6 @@ public class Laser_Disappear : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
+
     }
 }

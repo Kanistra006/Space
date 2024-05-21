@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -13,12 +13,12 @@ public class boss_manager : MonoBehaviour
     private bool isAttack = false;
     private int randomizer;
     private float timer;
-    
-    
+
+
     private void Start()
     {
         Rocket_Attack_Boss.enabled = false;
-        Bomb_Attack_Boss.enabled =  false;
+        Bomb_Attack_Boss.enabled = false;
         laser_Attack_Boss.enabled = false;
     }
     private void Update()
@@ -31,15 +31,15 @@ public class boss_manager : MonoBehaviour
             {
                 case 1:
                     strt_attack1();
-                    
+
                     break;
                 case 2:
                     strt_attack2();
-                    
+
                     break;
                 case 3:
                     strt_attack3();
-                    
+
                     break;
                 default:
                     break;
@@ -86,4 +86,4 @@ public class boss_manager : MonoBehaviour
         laser_Attack_Boss.enabled = false;
         isAttack = false;
     }
-}
+}*/

@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Is_On_Pos : MonoBehaviour
+public class Strelok_Movement : MonoBehaviour
 {
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
-    [SerializeField]public float verticalSpeed = 3.0f;
+    [SerializeField] public float verticalSpeed = 3.0f;
     [SerializeField] public float horizontalSpeed = 5.0f;
     [SerializeField] public float stopYPosition = 0.0f;
     private bool reachedPosition = false;

@@ -10,7 +10,7 @@ public class DisappearOnContactForBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        
+
         // Проверяем, соответствует ли объект, с которым произошло столкновение, определенному условию
         if (other.gameObject.tag == "Enemy") // Убедитесь, что у объекта игрока есть тег "Player"
         {
@@ -22,7 +22,7 @@ public class DisappearOnContactForBullet : MonoBehaviour
     {
         lifeTimer -= Time.deltaTime;
         if (lifeTimer <= 0) { Destroy(gameObject); }
-    
+
     }
 
 }

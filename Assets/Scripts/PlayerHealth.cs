@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
 
     public int maxHealth = 5; // Максимальное здоровье врага
-    public static int currentHealth; // Текущее здоровье врага
+    public int currentHealth; // Текущее здоровье врага
 
 
     void Start()
@@ -31,6 +31,11 @@ public class PlayerHealth : MonoBehaviour
         {
             Die(); // Функция смерти, если здоровье опустится до 0 или ниже
         }
+    }
+
+    public void Heal(int healPower)
+    {
+        currentHealth = Mathf.Min(maxHealth, currentHealth + healPower);
     }
 
     private void Die()

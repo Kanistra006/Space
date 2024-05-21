@@ -6,7 +6,7 @@ public class HealthBarController : MonoBehaviour
     public Image healthBarImage;  // Ссылка на компонент Image
     public Sprite[] healthBarSprites;  // Массив спрайтов для каждого уровня здоровья
     public PlayerHealth player;
-    
+
     //private int maxHealth = 5;
     //private int currentHealth;
 

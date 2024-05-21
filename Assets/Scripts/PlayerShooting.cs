@@ -9,7 +9,7 @@ public class PlayerShooting : MonoBehaviour
     float bulletSpeed = 20.0f;
     float shootingRate = 0.2f;
     float shootingCooldown;
-    
+
 
     // Update is called once per frame
     void Update()

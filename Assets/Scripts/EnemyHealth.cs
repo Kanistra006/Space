@@ -6,7 +6,7 @@ public class EnemyHealth : MonoBehaviour
     private int currentHealth; // Текущее здоровье врага
     public GameObject explosionPrefab;
 
-   
+
     void Start()
     {
         currentHealth = maxHealth; // Начальное здоровье при создании врага

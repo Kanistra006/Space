@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3776970411848673330}
   - component: {fileID: 4285488398124944160}
   - component: {fileID: 8847613167963606287}
-  - component: {fileID: 3175926385315985554}
+  - component: {fileID: 637689292545250878}
   m_Layer: 0
   m_Name: BulletPrefab
   m_TagString: PlayerBullet
@@ -97,7 +97,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3175926385315985554
+--- !u!114 &637689292545250878
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4313146145038437429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba4e694931eaecd44a288290dc5787ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d5c22db830c89e47910aaa5d5fa84f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 3373457649497958720, guid: e6a8a85f999678e4c8fd2b875fc3fb9e, type: 3}

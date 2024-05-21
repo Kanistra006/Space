@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
-public class HomingMissle: MonoBehaviour
+public class HomingMissle : MonoBehaviour
 {
     public Transform target;
     public float speed = 5f;
@@ -39,7 +39,7 @@ public class HomingMissle: MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
+
     }
 
 }

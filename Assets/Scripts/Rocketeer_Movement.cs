@@ -5,10 +5,10 @@ using UnityEngine;
 public class Rocketeer_Movement : MonoBehaviour
 {
     // Start is called before the first frame update
-    
+
 
     // Update is called once per frame
-   
+
     [SerializeField] float verticalSpeed = 3.0f;
     [SerializeField] public float stopYPosition = 0.0f;
     [SerializeField] public Transform Player; // Трансформ игрока, за которым следует враг
