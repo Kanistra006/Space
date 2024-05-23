@@ -5,7 +5,7 @@ using UnityEngine;
 public class HomingMissle : MonoBehaviour
 {
     public Transform target;
-    public float speed = 5f;
+    public float speed;
     public float rotateSpeed = 150f;
     public float time_of_life = 12f;
     private Rigidbody2D rb;

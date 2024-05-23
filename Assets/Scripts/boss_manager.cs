@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -86,4 +86,4 @@ public class boss_manager : MonoBehaviour
         laser_Attack_Boss.enabled = false;
         isAttack = false;
     }
-}*/
+}
