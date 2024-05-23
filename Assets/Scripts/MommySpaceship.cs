@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MommySpaceship : MonoBehaviour
 {
     public int maxHealth = 5; // Максимальное здоровье врага
-    private int currentHealth; // Текущее здоровье врага
+    public int currentHealth; // Текущее здоровье врага
 
 
     void Start()
@@ -38,4 +38,4 @@ public class MommySpaceship : MonoBehaviour
         SceneManager.LoadScene("GameOver");
         // Здесь можно добавить логику для анимации смерти, очков и т.д.
     }
-}
+} 

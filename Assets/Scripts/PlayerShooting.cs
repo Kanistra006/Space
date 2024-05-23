@@ -22,6 +22,14 @@ public class PlayerShooting : MonoBehaviour
             shootingCooldown = shootingRate;
         }
     }
+    public void Ultimate()
+    {
+        shootingRate = 0.01f;
+    }
+    public void UltimateOver()
+    {
+        shootingRate = 0.02f;
+    }
 
     void Shoot()
     {
