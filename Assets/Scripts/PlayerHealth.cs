@@ -8,6 +8,8 @@ public class PlayerHealth : MonoBehaviour
 
     public int maxHealth = 5; // Максимальное здоровье врага
     public int currentHealth; // Текущее здоровье врага
+    int healthWasBefore;
+    bool isUltimateActive = false;
 
 
     void Start()
@@ -26,7 +28,12 @@ public class PlayerHealth : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage; // Уменьшаем здоровье на величину полученного урона
+        if (isUltimateActive)
+        {
+            damage = 0;
+        }
+        else currentHealth -= damage; // Уменьшаем здоровье на величину полученного урона
+
         if (currentHealth <= 0)
         {
             Die(); // Функция смерти, если здоровье опустится до 0 или ниже
@@ -43,5 +50,13 @@ public class PlayerHealth : MonoBehaviour
         Destroy(gameObject); // Уничтожаем объект врага
         SceneManager.LoadScene("StartScene");
         // Здесь можно добавить логику для анимации смерти, очков и т.д.
+    }
+    public void Ultimate()
+    {
+        isUltimateActive = true;
+    }
+    public void UltimateOver()
+    {
+        isUltimateActive = false;
     }
 }
