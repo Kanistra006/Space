@@ -6,24 +6,54 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
 
-    public int maxHealth = 5; // Максимальное здоровье врага
-    public int currentHealth; // Текущее здоровье врага
+    public int maxHealth = 5; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+    public int currentHealth; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     int healthWasBefore;
     bool isUltimateActive = false;
 
+    private Coroutine damageCoroutine;
 
     void Start()
     {
-        currentHealth = maxHealth; // Начальное здоровье при создании врага
+        currentHealth = maxHealth; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     }
     void OnTriggerEnter2D(Collider2D other)
     {
 
-        // Проверяем, соответствует ли объект, с которым произошло столкновение, определенному условию
-        if (other.CompareTag("Enemy") || (other.CompareTag("EnemyBullet"))) // Убедитесь, что у объекта игрока есть тег "Player"
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "EnemyBullet") // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ "Player"
         {
             TakeDamage(1);
 
+        }
+        else if (other.gameObject.tag == "BossLaser")
+        {
+            if (damageCoroutine == null) // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+            {
+                damageCoroutine = StartCoroutine(DamageOverTime(1, other));
+            }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "BossLaser")
+        {
+            if (damageCoroutine != null) // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+            {
+                StopCoroutine(damageCoroutine);
+                damageCoroutine = null; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+            }
+        }
+    }
+
+
+    IEnumerator DamageOverTime(int damage, Collider2D other)
+    {
+        while (true)
+        {
+            TakeDamage(damage);
+            yield return new WaitForSeconds(1f);
         }
     }
     public void TakeDamage(int damage)
@@ -32,13 +62,15 @@ public class PlayerHealth : MonoBehaviour
         {
             damage = 0;
         }
-        else currentHealth -= damage; // Уменьшаем здоровье на величину полученного урона
+        else currentHealth -= damage; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 
         if (currentHealth <= 0)
         {
-            Die(); // Функция смерти, если здоровье опустится до 0 или ниже
+            Die(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ 0 пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
         }
     }
+
+
 
     public void Heal(int healPower)
     {
@@ -47,9 +79,9 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
-        Destroy(gameObject); // Уничтожаем объект врага
+        Destroy(gameObject); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         SceneManager.LoadScene("StartScene");
-        // Здесь можно добавить логику для анимации смерти, очков и т.д.
+        // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅ.пїЅ.
     }
     public void Ultimate()
     {

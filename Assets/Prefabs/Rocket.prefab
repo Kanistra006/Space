@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1664150241933189240}
   m_Layer: 0
   m_Name: Rocket
-  m_TagString: Enemy
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 5
+  speed: 2.5
   rotateSpeed: 100
   time_of_life: 10
 --- !u!114 &1664150241933189240
@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  explosionPrefab: {fileID: 0}
 --- !u!1 &4209912148437401488
 GameObject:
   m_ObjectHideFlags: 0

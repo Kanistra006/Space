@@ -8,6 +8,7 @@ public class rocket_attack_boss : MonoBehaviour
     public Transform[] firePoints; // ћассив точек, откуда будут вылетать ракеты
     public Transform target;
     private bool canShoot = true; // ‘лаг, показывающий, можно ли стрел€ть
+    public float attackDuration;
 
     private void Update()
     {
