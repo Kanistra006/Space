@@ -7,12 +7,22 @@ public class PlayerUltimate : MonoBehaviour
     PlayerShooting playerShooting;
     PlayerHealth playerHealth;
     float ultimateDuration = 5f;
+    public AudioClip ultimateSound; 
+    private AudioSource audioSource;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         playerShooting = GetComponent<PlayerShooting>();
         playerHealth = GetComponent<PlayerHealth>();
+        // Получаем компонент AudioSource
+        audioSource = GetComponent<AudioSource>();
+
+        // Убедитесь, что аудиоклип установлен
+        if (ultimateSound == null)
+        {
+            Debug.LogError("Explosion sound is not assigned!");
+        }
     }
 
     void Update()
@@ -23,11 +33,18 @@ public class PlayerUltimate : MonoBehaviour
             StartCoroutine(Ultimate());
         }
     }
-
+    void PlayExplosionSound()
+    {
+        if (audioSource != null && ultimateSound != null)
+        {
+            audioSource.PlayOneShot(ultimateSound);
+        }
+    }
     IEnumerator Ultimate()
     {
-        
+
         animator.SetBool("isUltimateActiveNow", true);
+        PlayExplosionSound();
 
         float remainingDuration = ultimateDuration;
         while (remainingDuration > 0)

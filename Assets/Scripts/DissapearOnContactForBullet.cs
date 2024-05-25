@@ -7,7 +7,8 @@ public class DisappearOnContactForBullet : MonoBehaviour
 {
     float lifeTimer = 0.83f; //Пропадает как только вылетает за экран
     public GameObject explosionPrefab;
-
+   
+    
     void OnTriggerEnter2D(Collider2D other)
     {
 
@@ -24,5 +25,4 @@ public class DisappearOnContactForBullet : MonoBehaviour
         if (lifeTimer <= 0) { Destroy(gameObject); }
 
     }
-
 }

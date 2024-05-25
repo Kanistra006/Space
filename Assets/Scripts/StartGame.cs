@@ -10,12 +10,22 @@ public class StartGame : MonoBehaviour
     [SerializeField] GameObject playerSpawnPoint;
     [SerializeField] GameObject player;
     GameObject spawnedPlayer; // Переменная для хранения ссылки на инстанцированного игрока
+    public AudioClip startSound;
+    private AudioSource audioSource;
 
     private void Start()
     {
         mommySpaceship = GameObject.Find("MommySpaceship");
         startText = GameObject.Find("StartText");
         animator = mommySpaceship.GetComponent<Animator>();
+        // Получаем компонент AudioSource
+        audioSource = GetComponent<AudioSource>();
+
+        // Убедитесь, что аудиоклип установлен
+        if (startSound == null)
+        {
+            Debug.LogError("Explosion sound is not assigned!");
+        }
 
         if (mommySpaceship == null)
         {
@@ -30,13 +40,20 @@ public class StartGame : MonoBehaviour
             Debug.LogError("Animator component not found on MommySpaceship!");
         }
     }
-
+    void PlayStartSound()
+    {
+        if (audioSource != null && startSound != null)
+        {
+            audioSource.PlayOneShot(startSound);
+        }
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))  // Проверяем, была ли нажата клавиша
         {
             startText.SetActive(false);
             StartCoroutine(MoveMommySpaceship());
+            PlayStartSound();
         }
     }
 

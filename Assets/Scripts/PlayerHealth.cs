@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour
     {
 
         // Проверяем, соответствует ли объект, с которым произошло столкновение, определенному условию
-        if (other.gameObject.tag == "Enemy") // Убедитесь, что у объекта игрока есть тег "Player"
+        if (other.CompareTag("Enemy") || (other.CompareTag("EnemyBullet"))) // Убедитесь, что у объекта игрока есть тег "Player"
         {
             TakeDamage(1);
 
