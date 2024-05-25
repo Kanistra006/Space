@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 
     public int maxHealth = 5; // Максимальное здоровье врага
     public int currentHealth; // Текущее здоровье врага
-
+    private Coroutine damageCoroutine;
 
     void Start()
     {
@@ -18,10 +18,39 @@ public class PlayerHealth : MonoBehaviour
     {
 
         // Проверяем, соответствует ли объект, с которым произошло столкновение, определенному условию
-        if (other.gameObject.tag == "Enemy") // Убедитесь, что у объекта игрока есть тег "Player"
+        if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "EnemyBullet") // Убедитесь, что у объекта игрока есть тег "Player"
         {
             TakeDamage(1);
 
+        }
+        else if (other.gameObject.tag == "BossLaser")
+        {
+            if (damageCoroutine == null) // Проверяем, запущена ли уже корутина
+            {
+                damageCoroutine = StartCoroutine(DamageOverTime(1, other));
+            }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "BossLaser")
+        {
+            if (damageCoroutine != null) // Проверяем, запущена ли корутина
+            {
+                StopCoroutine(damageCoroutine);
+                damageCoroutine = null; // Сбрасываем ссылку на корутину
+            }
+        }
+    }
+
+
+    IEnumerator DamageOverTime(int damage, Collider2D other)
+    {
+        while (true)
+        {
+            TakeDamage(damage);
+            yield return new WaitForSeconds(1f);
         }
     }
     public void TakeDamage(int damage)
@@ -32,6 +61,8 @@ public class PlayerHealth : MonoBehaviour
             Die(); // Функция смерти, если здоровье опустится до 0 или ниже
         }
     }
+
+
 
     public void Heal(int healPower)
     {

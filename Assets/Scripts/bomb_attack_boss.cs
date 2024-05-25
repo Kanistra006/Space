@@ -10,6 +10,7 @@ public class bomb_attack_boss : MonoBehaviour
     public float bombSpeed = 2.0f;
     private Rigidbody2D rb;
     private float timeSinceLastFire;
+    public float attackDuration;
 
     void Start()
     {
