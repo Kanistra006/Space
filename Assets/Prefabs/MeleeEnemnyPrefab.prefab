@@ -81,8 +81,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.7641817, y: 8.083005}
-  m_Size: {x: 1.2641817, y: 1.775919}
+  m_Offset: {x: 0.020529091, y: -0.013340116}
+  m_Size: {x: 0.90598, y: 1.6931632}
   m_Direction: 0
 --- !u!50 &7052420844464268111
 Rigidbody2D:
@@ -124,8 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
-  explosionPrefab: {fileID: 0}
-  healBagPrefab: {fileID: 7250152355959325725, guid: baafe0a0450d68540b95883532b2d398, type: 3}
+  explosionPrefab: {fileID: 5386931384573132411, guid: 50b5e01f01f8cba49b2ef448b0991bc1, type: 3}
 --- !u!1 &2771584480950562810
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,6 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6689956532581110676}
   - component: {fileID: 7783298289818554891}
+  - component: {fileID: 8350673031256049439}
   m_Layer: 0
   m_Name: MeleeEnemy
   m_TagString: Untagged
@@ -152,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 2771584480950562810}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.79, y: 7.89, z: 0.030677186}
+  m_LocalPosition: {x: 0, y: 0, z: 0.030677186}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -210,3 +210,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8350673031256049439
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2771584480950562810}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0eeae0a5284fb2a43b8034d9b65b1e02, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

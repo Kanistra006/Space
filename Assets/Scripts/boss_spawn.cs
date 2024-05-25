@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class boss_spawn : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject bossPrefab;
+    private bool isSpawned = false;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (GameManager.score % 15 == 0 && GameManager.score != 0 && isSpawned != true) 
+        {
+            SpawnBoss();
+            isSpawned = true;
+        }
     }
-}
+
+    void SpawnBoss()
+    {
+       
+        GameObject boss = Instantiate(bossPrefab, transform.position, Quaternion.identity);
+    }
+}    

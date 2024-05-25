@@ -84,7 +84,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   verticalSpeed: 3
   stopYPosition: 8
-  playerTransform: {fileID: 0}
 --- !u!50 &-6929106538341035357
 Rigidbody2D:
   serializedVersion: 4
@@ -160,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  explosionPrefab: {fileID: 2781416208802481001, guid: cc61a858488e10540bfd5ed172015639, type: 3}
 --- !u!114 &265862795565361565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,8 +176,7 @@ MonoBehaviour:
   firePoints:
   - {fileID: 7680360831593444661}
   - {fileID: 3194803390978632355}
-  launchForce: 10
-  rocketDelay: 10
+  target: {fileID: 2367097252641633236, guid: cc61a858488e10540bfd5ed172015639, type: 3}
 --- !u!1 &5524359630620655126
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,6 +187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2204901195315843854}
   - component: {fileID: 6965238889180720016}
+  - component: {fileID: 3162460970958369904}
   m_Layer: 0
   m_Name: RocketeerEnemy
   m_TagString: Untagged
@@ -262,6 +262,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3162460970958369904
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5524359630620655126}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 725b51f5a2ab0ec4faa66cd23bf0b9da, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8306662272095683834
 GameObject:
   m_ObjectHideFlags: 0

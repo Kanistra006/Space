@@ -11,7 +11,7 @@ public class Rocketeer_Movement : MonoBehaviour
 
     [SerializeField] float verticalSpeed = 3.0f;
     [SerializeField] public float stopYPosition = 0.0f;
-    [SerializeField] public Transform Player; // Трансформ игрока, за которым следует враг
+    private Transform Player; // Трансформ игрока, за которым следует враг
 
     private bool reachedPosition = false;
 

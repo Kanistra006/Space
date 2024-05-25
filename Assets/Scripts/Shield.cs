@@ -6,7 +6,7 @@ public class Shield : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy") || (other.CompareTag("BossLaser")) || (other.CompareTag("EnemyBullet")))
+        if (other.CompareTag("Enemy") ||  (other.CompareTag("EnemyBullet")))
         {
         Destroy(other.gameObject);
         }

@@ -20,7 +20,7 @@ public class Strelok_Movement : MonoBehaviour
     private float changeTime = 2.0f;
     private float timer = 0.0f;
     private int direction = 1;
-
+    public Animator anim;
     void Update()
     {
         // ¬ертикальное движение к заданной точке
@@ -47,5 +47,7 @@ public class Strelok_Movement : MonoBehaviour
 
             transform.Translate(Vector3.right * direction * horizontalSpeed * Time.deltaTime);
         }
+        
+
     }
 }
