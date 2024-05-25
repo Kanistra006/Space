@@ -77,7 +77,7 @@ public class StartGame : MonoBehaviour
             yield break;
         }
 
-        while (spawnedPlayer.transform.position.y <= -7.6f)
+        while (spawnedPlayer.transform.position.y <= -6.50f)
         {
             spawnedPlayer.transform.position += new Vector3(0, 0.2f, 0);
             yield return new WaitForSeconds(0.08f);  // ∆дЄм 0.08 секунды перед следующим шагом

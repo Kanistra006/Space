@@ -21,7 +21,7 @@ public class PlayerUltimate : MonoBehaviour
         // Убедитесь, что аудиоклип установлен
         if (ultimateSound == null)
         {
-            Debug.LogError("Explosion sound is not assigned!");
+            Debug.LogError("Ultimate sound is not assigned!");
         }
     }
 

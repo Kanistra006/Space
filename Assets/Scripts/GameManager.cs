@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     bool isShieldOn;
     void Update()
     {
-        if (score % 5 == 0 && score != 0 && isShieldOn == false)
+        if (score % 10 == 0 && score != 0 && isShieldOn == false)
         {
             SpawnShield();
             isShieldOn = true;

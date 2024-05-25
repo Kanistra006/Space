@@ -8,8 +8,12 @@ public class PlayerHealth : MonoBehaviour
 
     public int maxHealth = 5; // ������������ �������� �����
     public int currentHealth; // ������� �������� �����
-    int healthWasBefore;
     bool isUltimateActive = false;
+    public GameObject player;
+    GameObject spawnedPlayer;
+    public GameObject playerSpawnPoint;
+    public bool isPlayerDied = false;
+
 
     private Coroutine damageCoroutine;
 
@@ -67,6 +71,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die(); // ������� ������, ���� �������� ��������� �� 0 ��� ����
+
         }
     }
 
@@ -79,9 +84,9 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
-        Destroy(gameObject); // ���������� ������ �����
-        SceneManager.LoadScene("StartScene");
-        // ����� ����� �������� ������ ��� �������� ������, ����� � �.�.
+        isPlayerDied = true;
+        Destroy(gameObject);
+        SceneManager.LoadScene("GameOver");
     }
     public void Ultimate()
     {

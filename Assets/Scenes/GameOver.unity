@@ -180,12 +180,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 \u0441\u0442\u0440\u0435\u043B\u043A\u0443
-    \u0432\u0432\u0435\u0440\u0445, \u0447\u0442\u043E\u0431\u044B \u043D\u0430\u0447\u0430\u0442\u044C
-    \u0437\u0430\u043D\u043E\u0432\u043E"
+  m_text: PRESS UP ARROW KEY TO RESTART
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 84e343df193ba9e4bb344992b293a50e, type: 2}
+  m_sharedMaterial: {fileID: -2307412573621870087, guid: 84e343df193ba9e4bb344992b293a50e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -245,7 +243,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -309.79654, y: 146.41734, z: -361.90192, w: -23.93364}
+  m_margin: {x: -456.15033, y: 146.41734, z: -553.40753, w: -23.93364}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -435,8 +433,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: GAME OVER
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 84e343df193ba9e4bb344992b293a50e, type: 2}
+  m_sharedMaterial: {fileID: -2307412573621870087, guid: 84e343df193ba9e4bb344992b293a50e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
